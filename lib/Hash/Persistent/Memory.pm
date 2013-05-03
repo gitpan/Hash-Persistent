@@ -29,7 +29,7 @@ Hash::Persistent::Memory - in-memory persistent object which doesn't really stor
 
 =head1 VERSION
 
-version 1.00
+version 1.01
 
 =head1 AUTHORS
 

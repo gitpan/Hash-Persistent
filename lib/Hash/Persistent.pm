@@ -1,6 +1,6 @@
 package Hash::Persistent;
 
-our $VERSION = '1.00'; # VERSION
+our $VERSION = '1.01'; # VERSION
 # ABSTRACT: nested hashref serializable to the file
 
 
@@ -67,7 +67,7 @@ sub new {
             $self = $data;
             $_self->{format} = 'dumper' if $_self->{format} eq 'auto';
         } elsif ($str =~ /^{/) {
-            $self = JSON::XS->new->decode($str);
+            $self = JSON->new->decode($str);
             $_self->{format} = 'json' if $_self->{format} eq 'auto';
         }
         else {
@@ -171,7 +171,7 @@ Hash::Persistent - nested hashref serializable to the file
 
 =head1 VERSION
 
-version 1.00
+version 1.01
 
 =head1 SYNOPSIS
 
